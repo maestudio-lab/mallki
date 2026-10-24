@@ -1,0 +1,38 @@
+name: Reportar un error
+description: Algo no funciona como debería.
+labels: ["error"]
+body:
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Describe el error. Si puedes, añade una captura de pantalla.
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Abrí el módulo...
+        2. Pulsé...
+        3. Apareció...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+  - type: input
+    id: version
+    attributes:
+      label: Versión de Mallki
+      description: Configuración → Acerca de.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Versión de Windows
+      placeholder: "Windows 11 23H2"
